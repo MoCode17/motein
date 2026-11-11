@@ -80,14 +80,18 @@ Before saying a task is done:
 
 ## Commands
 
-Fill these in once the packages exist, and keep them current:
+npm workspaces from the repo root. Keep these current:
 
 ```
 npm install
-npm run build
-npm run lint
-npm test
+npm run build        # tsc build of every workspace
+npm run typecheck    # tsc --noEmit, including tests and scripts
+npm run lint         # eslint with typescript-eslint (type-aware)
+npm test             # vitest; never touches the network
+npm run check-url -w @motein/core -- <product-url>   # live adapter check against the real store
 ```
+
+TypeScript is pinned to 6.0.x because typescript-eslint does not support 7.x yet.
 
 ## Open decisions
 

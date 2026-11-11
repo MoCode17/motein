@@ -57,5 +57,5 @@ Taken literally, an automated price checker conflicts with clause (c), even at o
 ## Reproduce
 
 ```
-node apps/scraper/spike/fetch-price.mjs [product-url]
+npm run check-url -w @motein/core -- <product-url>
 ```
